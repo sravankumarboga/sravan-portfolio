@@ -94,7 +94,7 @@ function App() {
         <div className="continer">
           <div className="row">
             <div className="about1">
-              <img src="/images/sravan1.png" alt="" />
+              <img src={process.env.PUBLIC_URL + "/images/sravan1.png"} alt="" />
             </div>
             <div className="about2">
               <h1>About Me</h1>
@@ -166,7 +166,7 @@ function App() {
               <a href=""><i className="fa-brands fa-linkedin"></i></a>
               <a href=""><i className="fa-brands fa-facebook"></i></a>
             </div>
-            <a href="/images/SRAVAN KUMAR BOGA RESUME 1.pdf" download className="btn">Download CV</a>
+            <a href={process.env.PUBLIC_URL + "/images/SRAVAN KUMAR BOGA RESUME 1.pdf"} download className="btn">Download CV</a>
           </div>
         </div>
       </div>
