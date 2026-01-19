@@ -249,6 +249,10 @@ nav .menu {
 }
 
 @media (max-width:500px) {
+  .nav-bar {
+    flex-wrap: nowrap;
+  }
+
   #header {
     background-image: url('./images/mobile.png');
     background-position: center;
@@ -261,7 +265,7 @@ nav .menu {
   }
 
   .header-text h1 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   nav .menu {
@@ -312,6 +316,17 @@ nav .menu {
 
   .nav-title span {
     font-size: 50px;
+  }
+
+  .nav-bar ul li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
   }
 
   .about1 {
