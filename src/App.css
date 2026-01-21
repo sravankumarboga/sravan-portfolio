@@ -50,7 +50,13 @@ body {
   /* flex-basis: 400px 600px; */
   justify-content: space-between;
   flex-wrap: wrap;
-  /* position: fixed; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 5%;
+  background-color: transparent;
+  z-index: 1000;
 }
 
 /* .nav-bar ul{
@@ -237,6 +243,18 @@ nav ul .fa-moon,
   margin-bottom: 20px;
 }
 
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-img {
+  margin-right: 10px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
 .copyright {
   margin: 10px 0;
   padding: 10px;
@@ -251,6 +269,7 @@ nav .menu {
 @media (max-width:500px) {
   .nav-bar {
     flex-wrap: nowrap;
+    position: relative;
   }
 
   #header {
@@ -282,6 +301,17 @@ nav .menu {
     height: 100vh;
     padding-top: 50px;
     transition: right 0.5s;
+    z-index: 2;
+  }
+
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
 
   nav ul li {

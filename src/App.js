@@ -78,6 +78,7 @@ function App() {
 
               <i className="fa-solid fa-xmark menu" onClick={closeMenu}></i>
             </ul>
+            {isMenuOpen && <div className="nav-overlay" onClick={closeMenu}></div>}
             <i className="fa-solid fa-bars menu" onClick={openMenu} id="menu" style={{ color: isDarkMode ? 'white' : 'black' }}></i>
           </nav>
           <div className="header-text">
@@ -98,7 +99,7 @@ function App() {
             </div>
             <div className="about2">
               <h1>About Me</h1>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate voluptate amet fugiat, esse at omnis ipsa odio nesciunt laboriosam dolores iste vero ab, eos quia non quae est quos totam alias. Nobis doloremque ipsa modi itaque, totam impedit vel pariatur beatae. Soluta iure error voluptates laboriosam quas et eveniet non!</p>
+              <p>""Hello! I'm Sravan, a dedicated UI/UX and Website Designer from Bengaluru. I build digital products that are not only visually appealing but also easy to use. I specialize in turning user needs into interactive reality, ensuring every pixel serves a purpose. Let's create something amazing together.""</p>
               <div className="tab-titles">
                 <p
                   className={`tab-links ${activeTab === 'skills' ? 'active-tab-link' : ''}`}
@@ -124,9 +125,9 @@ function App() {
 
               <div className={`tab-content ${activeTab === 'Education' ? 'active-tab' : ''}`} id="Education">
                 <ul>
-                  <li><span>2021-2024</span><br />Degree Sri Venkateswara Degree College,Kadapa(Distric),Andhra Pradesh</li>
-                  <li><span>2019-2021</span><br /> Intermediate Sri Nalandha Junior College,Rajampeta,Andhra Pradesh</li>
-                  <li><span>2019 passed out</span><br />10<sup>th</sup>A.V.S.O&G High School,Madhavaram,Kadapa,Andhra Pradesh</li>
+                  <li><span>2021-2024</span><br />Bachelor’s Degree (B.Sc(M.S.Cs)) | Sri Venkateswara Degree College, Kadapa, Andhra Pradesh.</li>
+                  <li><span>2019-2021</span><br /> Intermediate (M.P.C) | Sri Nalandha Junior College, Rajampeta, Andhra Pradesh.</li>
+                  <li><span>2019 passed out</span><br />Secondary School (10th) | A.V.S.O & G High School, Madhavaram, Kadapa, Andhra Pradesh.</li>
                 </ul>
               </div>
             </div>
@@ -140,16 +141,19 @@ function App() {
           <h1 className="services-title">My Services</h1>
           <div className="services-main-continer">
             <div className="services-tab">
-              <h2 className="services-tab-title">Ui/Ux Design</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet suscipit, iure natus corrupti non ad voluptatem sapiente doloremque modi recusandae error eaque. Dolores, vero nulla?</p>
+              <i className="fa-solid fa-crop-alt"></i>
+              <h2 className="services-tab-title">UI/UX Design</h2>
+              <p>I create intuitive, user-centric designs that ensure a seamless digital experience. My focus is on understanding user behavior and translating complex requirements into elegant, functional interfaces.</p>
             </div>
             <div className="services-tab">
-              <h2 className="services-tab-title">Website Design </h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet suscipit, iure natus corrupti non ad voluptatem sapiente doloremque modi recusandae error eaque. Dolores, vero nulla?</p>
+              <i className="fa-solid fa-code"></i>
+              <h2 className="services-tab-title">Web Development</h2>
+              <p>Crafting visually stunning and highly responsive websites. From modern portfolios to complex web applications, I ensure excellence in every pixel and optimal performance across all devices.</p>
             </div>
             <div className="services-tab">
-              <h2 className="services-tab-title">Mobile App Design</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet suscipit, iure natus corrupti non ad voluptatem sapiente doloremque modi recusandae error eaque. Dolores, vero nulla?</p>
+              <i className="fa-solid fa-mobile-screen-button"></i>
+              <h2 className="services-tab-title">App Design</h2>
+              <p>Designing high-quality mobile applications with a focus on usability and modern aesthetics. I build across platforms, ensuring your app feels native, engaging, and accessible for every user.</p>
             </div>
           </div>
         </div>
@@ -159,14 +163,17 @@ function App() {
       <div id="contact">
         <div className="continer">
           <div className="footer">
-            <h1>Sravan Kumar</h1>
-            <h2>Email:sravanboga3@gmail.com</h2>
-            <h2>Contact: 8121906691</h2>
-            <div className="icons">
-              <a href=""><i className="fa-brands fa-linkedin"></i></a>
-              <a href=""><i className="fa-brands fa-facebook"></i></a>
+            <img className="footer-img" src={process.env.PUBLIC_URL + "/images/sravan1.png"} alt="" />
+            <div className="footer-text">
+              <h1>Sravan Kumar</h1>
+              <h2>Email:sravanboga3@gmail.com</h2>
+              <h2>Contact: 8121906691</h2>
+              <div className="icons">
+                <a href="#"><i className="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i className="fa-brands fa-facebook"></i></a>
+              </div>
+              <a href={process.env.PUBLIC_URL + "/images/SRAVAN KUMAR BOGA RESUME 1.pdf"} download className="btn">Download CV</a>
             </div>
-            <a href={process.env.PUBLIC_URL + "/images/SRAVAN KUMAR BOGA RESUME 1.pdf"} download className="btn">Download CV</a>
           </div>
         </div>
       </div>
